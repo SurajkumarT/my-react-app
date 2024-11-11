@@ -1,0 +1,16 @@
+name: build test deploy project
+on: push
+jobs:
+   build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+      - name: set up node
+        uses: actions/setup-node@v4
+        with: 
+          node-version: '19.3.0'
+      - name: restore dependencies
+        run: npm ci
+      - name: run test cases
+        run: npm run
