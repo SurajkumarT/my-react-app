@@ -13,4 +13,4 @@ jobs:
       - name: restore dependencies
         run: npm ci
       - name: run test cases
-        run: npm run
+        run: npm run test
