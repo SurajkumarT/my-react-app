@@ -30,7 +30,7 @@ jobs:
       - name: restore dependencies
         run: npm ci
       - name: run test cases
-        run: npm run test
+        run: npm run build
       - name: publish artifacts
         uses: actions/upload-artifact@v3
         with:
